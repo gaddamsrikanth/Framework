@@ -20,27 +20,29 @@ public class scanImageController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(detectImage(_:)), name: NSNotification.Name(rawValue: "detectImage"), object: nil)
-        let navBackgroundImage:UIImage! = UIImage(named: "logo")
-        let imgView = UIImageView(image: navBackgroundImage)
-        self.navigationItem.titleView = imgView
-        self.navigationItem.hidesBackButton = true
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"), for: .default)
-        
+        localization()
+        let bundle: Bundle = Bundle(identifier: "com.Framework")!
         let button = UIButton.init(type: .custom)
-        button.setImage(UIImage.init(named: "arrow"), for: UIControlState.normal)
+        button.setImage(UIImage(named: "arrow", in: bundle, compatibleWith: nil), for: UIControlState.normal)
         button.addTarget(self, action:#selector(btnBck), for: UIControlEvents.touchUpInside)
-        button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30)
+        button.frame = CGRect.init(x: 0, y: 0, width: 15, height: 15)
         let barButton = UIBarButtonItem.init(customView: button)
         self.navigationItem.leftBarButtonItem = barButton
-        localization()
+        bgView.backgroundColor = ViewController1.bgColor
+        var navBackgroundImage:UIImage! = UIImage(named: "logo", in: bundle, compatibleWith: nil)
+        navBackgroundImage = resizeImage(image: navBackgroundImage, newHeight: 40)
+        let imgView = UIImageView(image: navBackgroundImage)
+        imgView.frame = CGRect.init(x: 100, y: 0, width: 135, height: 40)
+        self.navigationItem.titleView = imgView
+        
     }
     
     public override func viewDidLayoutSubviews() {
         bgView.backgroundColor = ViewController1.bgColor
-        viewCamera.layer.cornerRadius = 5
-        viewCamera.layer.borderWidth = 5
+        viewCamera.clipsToBounds = true
+        viewCamera.layer.cornerRadius = 20
+        viewCamera.layer.borderWidth = 20
         viewCamera.layer.borderColor = UIColor.white.cgColor
-        
     }
 
     override public func didReceiveMemoryWarning() {
@@ -57,6 +59,17 @@ public class scanImageController: UIViewController {
 //        self.navigationController?.pushViewController(UIViewController(nibName: "CloudRecoViewController", bundle: resourceBundle), animated: true)
         self.addChildViewController(ViewController1.cameraView)
         self.view.addSubview(ViewController1.cameraView.view)
+    }
+    
+    func resizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
+        let scale = newHeight / image.size.height
+        let newWidth = image.size.width * scale
+        UIGraphicsBeginImageContext(CGSize(width :newWidth,height: newHeight))
+        image.draw(in: CGRect(x: 0,y:0,width : newWidth,height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
     func btnBck() {

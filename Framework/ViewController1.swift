@@ -25,25 +25,24 @@ public class ViewController1: UIViewController{
     override public func viewDidLoad() {
         super.viewDidLoad()
         let cvWrap = CVWrapper()
+
         ViewController1.cameraView = cvWrap.beginProcess()
-        print(ViewController1.cameraView.nibName!)
-        let navBackgroundImage:UIImage! = UIImage(named: "logo")
-        let imgView = UIImageView(image: navBackgroundImage)
-        self.navigationItem.titleView = imgView
-        self.navigationItem.hidesBackButton = true
-        self.navigationController?.navigationBar.tintColor = UIColor.lightGray
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"), for: .default)
+        localization()
+        
+        let bundle: Bundle = Bundle(identifier: "com.Framework")!
         let button = UIButton.init(type: .custom)
-        button.setImage(UIImage.init(named: "arrow"), for: UIControlState.normal)
+        button.setImage(UIImage(named: "arrow", in: bundle, compatibleWith: nil), for: UIControlState.normal)
         button.addTarget(self, action:#selector(bckBtn), for: UIControlEvents.touchUpInside)
-        button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30)
+        button.frame = CGRect.init(x: 0, y: 0, width: 15, height: 15)
         let barButton = UIBarButtonItem.init(customView: button)
         self.navigationItem.leftBarButtonItem = barButton
-
-        localization()
-    }
-    
-    public override func viewDidLayoutSubviews() {
+        
+        var navBackgroundImage:UIImage! = UIImage(named: "logo", in: bundle, compatibleWith: nil)
+        navBackgroundImage = resizeImage(image: navBackgroundImage, newHeight: 40)
+        let imgView = UIImageView(image: navBackgroundImage)
+        imgView.frame = CGRect.init(x: 100, y: 0, width: 135, height: 40)
+        self.navigationItem.titleView = imgView
+        
         self.btnScan.layer.cornerRadius = self.btnScan.frame.height / 2
         bgView.backgroundColor = ViewController1.bgColor
         btnScan.backgroundColor = ViewController1.btnColor
@@ -51,6 +50,17 @@ public class ViewController1: UIViewController{
         lblInstruction.textColor = ViewController1.txtColor
         lbladReaderHome.textColor = ViewController1.txtColor
         btnScan.setTitleColor(ViewController1.txtColor, for: .normal)
+        
+        
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+           }
+    
+    public override func viewDidLayoutSubviews() {
+        
+//        self.navigationController?.navigationBar.tintColor = UIColor.lightGray
+        
     }
     
     @IBAction func openImagescan(_ sender: Any) {
@@ -71,6 +81,17 @@ public class ViewController1: UIViewController{
         lblusrManual.text = NSLocalizedString("User manual:", tableName: nil , bundle: bundle, value: "", comment: "")
         
         lblInstruction.text = NSLocalizedString("Set the camera toward a picture of a product Home Center ads are printed and received information More detailed, more photos, and even videos On the product.", tableName: nil , bundle: bundle, value: "", comment: "")
+    }
+    
+    func resizeImage(image: UIImage, newHeight: CGFloat) -> UIImage {
+        let scale = newHeight / image.size.height
+        let newWidth = image.size.width * scale
+        UIGraphicsBeginImageContext(CGSize(width :newWidth,height: newHeight))
+        image.draw(in: CGRect(x: 0,y:0,width : newWidth,height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
     func bckBtn() {
