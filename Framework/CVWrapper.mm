@@ -36,6 +36,4 @@
     return (obj->imgName);
 }
 
-
-
 @end

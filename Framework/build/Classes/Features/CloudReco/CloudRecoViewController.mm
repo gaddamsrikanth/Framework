@@ -78,7 +78,7 @@ static const char* const kSecretKey = "6ba7198ae4b37a5a0c59a2dfb065d68e77dff5ba"
     
     extendedTrackingEnabled = NO;
     continuousAutofocusEnabled = YES;
-    flashEnabled = NO;
+    flashEnabled = YES;
     frontCameraEnabled = NO;
     
     vapp = [[SampleApplicationSession alloc] initWithDelegate:self];
@@ -95,20 +95,11 @@ static const char* const kSecretKey = "6ba7198ae4b37a5a0c59a2dfb065d68e77dff5ba"
     [self scanlineCreate];
     
     // double tap used to also trigger the menu
-    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget: self action:@selector(doubleTapGestureAction:)];
-    doubleTap.numberOfTapsRequired = 2;
-    [self.view addGestureRecognizer:doubleTap];
+    
     
     // a single tap will trigger a single autofocus operation
     tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(autofocus:)];
-    if (doubleTap != NULL) {
-        [tapGestureRecognizer requireGestureRecognizerToFail:doubleTap];
-    }
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGestureAction:)];
-    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:swipeRight];
-    
+   
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(dismissARViewController)
@@ -546,9 +537,8 @@ static const char* const kSecretKey = "6ba7198ae4b37a5a0c59a2dfb065d68e77dff5ba"
                     //  Avoid entering on ContentMode when a bad target is found
                     //  (Bad Targets are targets that are exists on the CloudReco database but not on our
                     //  own book database)
-                    NSLog(@"Successfully created new trackable '%s' with rating '%d'.",
-                          newTrackable->getName(), result->getTrackingRating());
-                    self->imgName = [NSString stringWithFormat:@"%s", newTrackable->getName()];
+                    NSLog(@"Successfully created new trackable '%s'.", result->getMetaData());
+                    self->imgName = [NSString stringWithFormat:@"%s", result->getMetaData()];
                     [[NSNotificationCenter defaultCenter] postNotificationName:@"detectImage" object:imgName];
                     if (extendedTrackingEnabled) {
                         newTrackable->startExtendedTracking();

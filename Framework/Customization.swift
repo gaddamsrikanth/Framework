@@ -23,8 +23,4 @@ public class Customization {
     public func setTextColor(_ color : UIColor) {
         ViewController1.txtColor = color
     }
-    
-    public func setLanguage(_ lang : String) {
-        ViewController1.language = lang
-    }
 }

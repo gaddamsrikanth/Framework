@@ -19,7 +19,6 @@
     BOOL isVisualSearchOn;
     
     int lastErrorCode;
-
     // menu options
     BOOL extendedTrackingEnabled;
     BOOL continuousAutofocusEnabled;

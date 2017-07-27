@@ -5,7 +5,8 @@
   Created by Developer88 on 7/25/17.
   Copyright © 2017 Developer88. All rights reserved.
 */
-"AD_READER" = "הקורא של המודעה של מרכז הבית";
-"MANUAL" = "הוראות שימוש:";
-"INSTRUCTION" = "הגדר את המצלמה לכיוון תמונה של מוצר. מודעות מרכז הבית מודפסות ומתקבלות מידע מפורט יותר, תמונות נוספות ואפילו סרטונים על המוצר.";
-"START" = "הַתחָלָה";
+"Ad reader Of Home Center" = "הקורא של המודעה של מרכז הבית";
+"User manual:" = "הוראות שימוש:";
+"Set the camera toward a picture of a product Home Center ads are printed and received information More detailed, more photos, and even videos On the product." = "הגדר את המצלמה לכיוון תמונה של מוצר. מודעות מרכז הבית מודפסות ומתקבלות מידע מפורט יותר, תמונות נוספות ואפילו סרטונים על המוצר.";
+"Start" = "הַתחָלָה";
+"Point camera at a product on the ad" = "הצבע על מצלמה במודעה שמופיעה במודעה";

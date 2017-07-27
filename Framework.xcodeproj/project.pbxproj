@@ -12,11 +12,18 @@
 		5C113B9F1F1F385100A03B6B /* Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C113B911F1F385100A03B6B /* Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5C113D8E1F1F4F8700A03B6B /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C113D8C1F1F4F8700A03B6B /* ViewController1.swift */; };
 		5C113FA81F1F77C100A03B6B /* scanImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C113FA61F1F77C100A03B6B /* scanImageController.swift */; };
-		5C113FA91F1F77C100A03B6B /* scanImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C113FA71F1F77C100A03B6B /* scanImageController.xib */; };
 		5C1D71701F271BE2009EA15D /* ViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1D71721F271BE2009EA15D /* ViewController1.xib */; };
 		5C1D71741F271CA7009EA15D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C1D71761F271CA7009EA15D /* Localizable.strings */; };
 		5C656FA41F26F49700117F91 /* Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C656FA31F26F49700117F91 /* Customization.swift */; };
 		5C656FD21F26FD0400117F91 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C656FD11F26FD0400117F91 /* StringConstant.swift */; };
+		5C66FE2D1F299B4800B7B32A /* scanImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C66FE2F1F299B4800B7B32A /* scanImageController.xib */; };
+		5C66FE321F29A87300B7B32A /* CloudRecoEAGLView.h in Resources */ = {isa = PBXBuildFile; fileRef = 5CC2C5021F20611E0094E14E /* CloudRecoEAGLView.h */; };
+		5C66FE331F29A87300B7B32A /* CloudRecoEAGLView.mm in Resources */ = {isa = PBXBuildFile; fileRef = 5CC2C5031F20611E0094E14E /* CloudRecoEAGLView.mm */; };
+		5C66FE341F29A87300B7B32A /* CloudRecoViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 5CC2C5041F20611E0094E14E /* CloudRecoViewController.h */; };
+		5C66FE351F29A87300B7B32A /* CloudRecoViewController.mm in Resources */ = {isa = PBXBuildFile; fileRef = 5CC2C5051F20611E0094E14E /* CloudRecoViewController.mm */; };
+		5C66FE3A1F29C09400B7B32A /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C66FE381F29C09400B7B32A /* arrow.png */; };
+		5C66FE3B1F29C09400B7B32A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C66FE391F29C09400B7B32A /* logo.png */; };
+		5C66FE3D1F29C4B400B7B32A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C66FE3C1F29C4B400B7B32A /* background.png */; };
 		5C7FB84A1F21E36C00B56D3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7FB8491F21E36C00B56D3C /* UIKit.framework */; };
 		5C7FB84C1F21E37700B56D3C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7FB84B1F21E37700B56D3C /* OpenGLES.framework */; };
 		5C7FB84E1F21E37E00B56D3C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7FB84D1F21E37E00B56D3C /* QuartzCore.framework */; };
@@ -309,13 +316,17 @@
 		5C113B9E1F1F385100A03B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C113D8C1F1F4F8700A03B6B /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		5C113FA61F1F77C100A03B6B /* scanImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scanImageController.swift; sourceTree = "<group>"; };
-		5C113FA71F1F77C100A03B6B /* scanImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scanImageController.xib; sourceTree = "<group>"; };
-		5C1D71711F271BE2009EA15D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController1.xib; sourceTree = "<group>"; };
-		5C1D71731F271C34009EA15D /* he */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = he; path = he.lproj/ViewController1.xib; sourceTree = "<group>"; };
 		5C1D71751F271CA7009EA15D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5C1D71771F271CC3009EA15D /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5C656FA31F26F49700117F91 /* Customization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customization.swift; sourceTree = "<group>"; };
 		5C656FD11F26FD0400117F91 /* StringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
+		5C66FE261F29978900B7B32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ViewController1.xib; sourceTree = "<group>"; };
+		5C66FE2C1F299B3A00B7B32A /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/ViewController1.strings; sourceTree = "<group>"; };
+		5C66FE2E1F299B4800B7B32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/scanImageController.xib; sourceTree = "<group>"; };
+		5C66FE311F299B4A00B7B32A /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/scanImageController.strings; sourceTree = "<group>"; };
+		5C66FE381F29C09400B7B32A /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		5C66FE391F29C09400B7B32A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5C66FE3C1F29C4B400B7B32A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		5C7FB8491F21E36C00B56D3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5C7FB84B1F21E37700B56D3C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5C7FB84D1F21E37E00B56D3C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -645,6 +656,9 @@
 		5C113B901F1F385100A03B6B /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				5C66FE3C1F29C4B400B7B32A /* background.png */,
+				5C66FE381F29C09400B7B32A /* arrow.png */,
+				5C66FE391F29C09400B7B32A /* logo.png */,
 				5CC2C5D51F20613E0094E14E /* CVWrapper.h */,
 				5CC2C5D61F20613E0094E14E /* CVWrapper.mm */,
 				5CC2C4FF1F20611E0094E14E /* Classes */,
@@ -655,7 +669,7 @@
 				5C113D8C1F1F4F8700A03B6B /* ViewController1.swift */,
 				5C1D71721F271BE2009EA15D /* ViewController1.xib */,
 				5C113FA61F1F77C100A03B6B /* scanImageController.swift */,
-				5C113FA71F1F77C100A03B6B /* scanImageController.xib */,
+				5C66FE2F1F299B4800B7B32A /* scanImageController.xib */,
 				5CC9EBC81F20AF2E0037EB74 /* WebViewVC.swift */,
 				5CC9EBC91F20AF2E0037EB74 /* WebViewVC.xib */,
 				5C656FA31F26F49700117F91 /* Customization.swift */,
@@ -1444,6 +1458,7 @@
 			knownRegions = (
 				en,
 				he,
+				Base,
 			);
 			mainGroup = 5C113B841F1F385100A03B6B;
 			productRefGroup = 5C113B8F1F1F385100A03B6B /* Products */;
@@ -1461,6 +1476,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C66FE321F29A87300B7B32A /* CloudRecoEAGLView.h in Resources */,
+				5C66FE331F29A87300B7B32A /* CloudRecoEAGLView.mm in Resources */,
+				5C66FE341F29A87300B7B32A /* CloudRecoViewController.h in Resources */,
+				5C66FE351F29A87300B7B32A /* CloudRecoViewController.mm in Resources */,
 				5CC9EBCB1F20AF2E0037EB74 /* WebViewVC.xib in Resources */,
 				5CC2C4C91F2060F10094E14E /* FM.png in Resources */,
 				5CC2C4F21F2060F10094E14E /* VB.png in Resources */,
@@ -1470,6 +1489,7 @@
 				5CC2C4EA1F2060F10094E14E /* button_main.png in Resources */,
 				5CC2C4BF1F2060F10094E14E /* CR.png in Resources */,
 				5CC2C4E11F2060F10094E14E /* TextureTeapotBlue.png in Resources */,
+				5C66FE3D1F29C4B400B7B32A /* background.png in Resources */,
 				5CC2C5C71F20611F0094E14E /* SimpleWithColor.fragsh in Resources */,
 				5CC2C4EF1F2060F10094E14E /* icon_camera@2x.png in Resources */,
 				5CC2C4CF1F2060F10094E14E /* IT.png in Resources */,
@@ -1487,6 +1507,7 @@
 				5CC2C4F11F2060F10094E14E /* UDT.png in Resources */,
 				5CC2C4EE1F2060F10094E14E /* icon_camera.png in Resources */,
 				5CC2C4E81F2060F10094E14E /* button_cancel_pressed.png in Resources */,
+				5C66FE3B1F29C09400B7B32A /* logo.png in Resources */,
 				5CC2C4F51F2060F10094E14E /* Wood.xml in Resources */,
 				5CC2C4E21F2060F10094E14E /* TextureTeapotBrass.png in Resources */,
 				5CC2C4F01F2060F10094E14E /* UD_about.html in Resources */,
@@ -1519,7 +1540,7 @@
 				5CC2C4CD1F2060F10094E14E /* letter_Q.png in Resources */,
 				5CC2C4F31F2060F10094E14E /* VB_about.html in Resources */,
 				5CC2C4C81F2060F10094E14E /* TextureTransparent.png in Resources */,
-				5C113FA91F1F77C100A03B6B /* scanImageController.xib in Resources */,
+				5C66FE2D1F299B4800B7B32A /* scanImageController.xib in Resources */,
 				5CC2C4F61F2060F10094E14E /* card_info.png in Resources */,
 				5CC2C4D41F2060F10094E14E /* Tarmac.xml in Resources */,
 				5CC2C4FC1F2060F10094E14E /* Vuforia.dat in Resources */,
@@ -1535,6 +1556,7 @@
 				5CC2C4FD1F2060F10094E14E /* Vuforia.xml in Resources */,
 				5CC2C4E71F2060F10094E14E /* button_cancel@2x.png in Resources */,
 				5CC2C4FE1F2060F10094E14E /* vumark_texture.png in Resources */,
+				5C66FE3A1F29C09400B7B32A /* arrow.png in Resources */,
 				5CC2C4C61F2060F10094E14E /* sodacan.xml in Resources */,
 				5CC2C4CC1F2060F10094E14E /* letter_C.png in Resources */,
 				5CC2C4D91F2060F10094E14E /* TextureBowlAndSpoon.png in Resources */,
@@ -1627,8 +1649,8 @@
 		5C1D71721F271BE2009EA15D /* ViewController1.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5C1D71711F271BE2009EA15D /* en */,
-				5C1D71731F271C34009EA15D /* he */,
+				5C66FE261F29978900B7B32A /* Base */,
+				5C66FE2C1F299B3A00B7B32A /* he */,
 			);
 			name = ViewController1.xib;
 			sourceTree = "<group>";
@@ -1640,6 +1662,15 @@
 				5C1D71771F271CC3009EA15D /* he */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5C66FE2F1F299B4800B7B32A /* scanImageController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C66FE2E1F299B4800B7B32A /* Base */,
+				5C66FE311F299B4A00B7B32A /* he */,
+			);
+			name = scanImageController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

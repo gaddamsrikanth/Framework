@@ -10,11 +10,10 @@ import UIKit
 
 public class ViewController1: UIViewController{
     
-    static var cameraView : UIViewController!
+    public static var cameraView : UIViewController!
     static var bgColor : UIColor! = #colorLiteral(red: 0.8564705253, green: 0.123423703, blue: 0.1560736001, alpha: 1)
     static var btnColor : UIColor! = #colorLiteral(red: 0.6306080222, green: 0.07898784429, blue: 0.0982254222, alpha: 1)
     static var txtColor : UIColor! = #colorLiteral(red: 0.9737131134, green: 0.9737131134, blue: 0.9737131134, alpha: 1)
-    static var language : String! = "en"
     
     @IBOutlet var btnScan: UIButton!
     @IBOutlet var lbladReaderHome: UILabel!
@@ -25,9 +24,22 @@ public class ViewController1: UIViewController{
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        ViewController1.language = "iw"
         let cvWrap = CVWrapper()
         ViewController1.cameraView = cvWrap.beginProcess()
+        print(ViewController1.cameraView.nibName!)
+        let navBackgroundImage:UIImage! = UIImage(named: "logo")
+        let imgView = UIImageView(image: navBackgroundImage)
+        self.navigationItem.titleView = imgView
+        self.navigationItem.hidesBackButton = true
+        self.navigationController?.navigationBar.tintColor = UIColor.lightGray
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "background"), for: .default)
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage.init(named: "arrow"), for: UIControlState.normal)
+        button.addTarget(self, action:#selector(bckBtn), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+
         localization()
     }
     
@@ -48,10 +60,21 @@ public class ViewController1: UIViewController{
     }
     
     func localization() -> Void {
-        btnScan.setTitle("START".localized(lang: ViewController1.language), for: .normal)
-        lbladReaderHome.text = "AD_READER".localized(lang: ViewController1.language)
-        lblusrManual.text = "MANUAL".localized(lang: ViewController1.language)
-        lblInstruction.text = "INSTRUCTION".localized(lang: ViewController1.language)
+        
+        let bundle: Bundle = Bundle(identifier: "com.Framework")!
+        
+        btnScan.setTitle(NSLocalizedString("Start", tableName: nil , bundle: bundle, value: "", comment: ""), for: .normal)
+        
+        lbladReaderHome.text = NSLocalizedString("Ad reader Of Home Center", tableName: nil , bundle: bundle, value: "", comment: "")
+        
+        
+        lblusrManual.text = NSLocalizedString("User manual:", tableName: nil , bundle: bundle, value: "", comment: "")
+        
+        lblInstruction.text = NSLocalizedString("Set the camera toward a picture of a product Home Center ads are printed and received information More detailed, more photos, and even videos On the product.", tableName: nil , bundle: bundle, value: "", comment: "")
+    }
+    
+    func bckBtn() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     override public func didReceiveMemoryWarning() {

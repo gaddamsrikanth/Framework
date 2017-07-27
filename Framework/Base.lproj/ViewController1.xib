@@ -30,7 +30,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="74" id="qQ6-ey-Bg4"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -49,44 +49,44 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User manual:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIw-W9-IcY">
-                    <rect key="frame" x="94" y="170" width="133" height="40"/>
+                    <rect key="frame" x="94" y="138" width="133" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="cWS-ng-iC6"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-qy-2Sb">
-                    <rect key="frame" x="25" y="210" width="268" height="140"/>
+                    <rect key="frame" x="26" y="186" width="268" height="158"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="yXc-BC-g0s"/>
+                        <constraint firstAttribute="height" constant="158" id="yXc-BC-g0s"/>
                     </constraints>
                     <string key="text">Set the camera toward a picture of a product
 Home Center ads are printed and received information
 More detailed, more photos, and even videos
 On the product.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.85647052526473999" green="0.12342370301485062" blue="0.15607360005378723" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="BOQ-qy-2Sb" firstAttribute="top" secondItem="uIw-W9-IcY" secondAttribute="bottom" id="AcB-Ra-QAW"/>
-                <constraint firstItem="pav-zF-n1Z" firstAttribute="top" secondItem="BOQ-qy-2Sb" secondAttribute="bottom" constant="136" id="Aye-sO-C8S"/>
-                <constraint firstItem="uIw-W9-IcY" firstAttribute="top" secondItem="Ghr-yb-amc" secondAttribute="bottom" constant="33" id="GrX-tf-rVn"/>
+                <constraint firstItem="BOQ-qy-2Sb" firstAttribute="top" secondItem="uIw-W9-IcY" secondAttribute="bottom" constant="8" id="AcB-Ra-QAW"/>
+                <constraint firstItem="pav-zF-n1Z" firstAttribute="top" secondItem="BOQ-qy-2Sb" secondAttribute="bottom" constant="142" id="Aye-sO-C8S"/>
+                <constraint firstItem="uIw-W9-IcY" firstAttribute="top" secondItem="Ghr-yb-amc" secondAttribute="bottom" constant="1" id="GrX-tf-rVn"/>
                 <constraint firstItem="Ghr-yb-amc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="Ien-4y-8mS"/>
                 <constraint firstItem="pav-zF-n1Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="d3L-oz-rD8"/>
                 <constraint firstAttribute="trailing" secondItem="Ghr-yb-amc" secondAttribute="trailing" constant="59" id="fNi-k3-Tuc"/>
-                <constraint firstItem="BOQ-qy-2Sb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="ji8-W7-IG6"/>
+                <constraint firstItem="BOQ-qy-2Sb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="ji8-W7-IG6"/>
                 <constraint firstAttribute="bottom" secondItem="pav-zF-n1Z" secondAttribute="bottom" constant="44" id="l22-QZ-5AC"/>
                 <constraint firstAttribute="trailing" secondItem="pav-zF-n1Z" secondAttribute="trailing" constant="93" id="oiw-Oj-noZ"/>
                 <constraint firstAttribute="trailing" secondItem="uIw-W9-IcY" secondAttribute="trailing" constant="93" id="q1t-Z8-1TD"/>
                 <constraint firstItem="uIw-W9-IcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="94" id="vye-99-sSm"/>
-                <constraint firstAttribute="trailing" secondItem="BOQ-qy-2Sb" secondAttribute="trailing" constant="27" id="y0F-He-2yz"/>
+                <constraint firstAttribute="trailing" secondItem="BOQ-qy-2Sb" secondAttribute="trailing" constant="26" id="y0F-He-2yz"/>
             </constraints>
         </view>
     </objects>
